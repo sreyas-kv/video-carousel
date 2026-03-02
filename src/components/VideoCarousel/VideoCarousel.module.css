@@ -1,0 +1,72 @@
+.section {
+  padding: 2.5rem 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  margin-right: 10rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: #4F6076;
+  letter-spacing: -0.03125rem;
+  margin-left: 1.25rem;
+}
+
+.navButtons {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.track {
+  display: flex;
+  gap: 1.25rem;
+  overflow: hidden;
+  padding: 1.25rem;
+}
+
+@media (max-width: 48rem) {
+  .section {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .header {
+    margin-right: 0;
+  }
+
+  .track {
+    gap: 0.875rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .title {
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 1.25rem 1rem;
+  }
+
+  .header {
+    margin-right: 0;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .track {
+    padding: 0.5rem;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    -webkit-overflow-scrolling: touch;
+    
+  }
+}

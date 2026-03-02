@@ -1,0 +1,39 @@
+.controls {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    z-index: 10;
+  }
+  
+  .controlButton {
+    width: 2rem;
+    height: 2rem;
+    /* border-radius: 50%; */
+    /* border: 0.09375rem solid rgba(255, 255, 255, 0.6); */
+    border: none;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(0.5rem);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background 0.2s, transform 0.15s;
+  }
+  
+  .controlButton:hover {
+    background: rgba(255, 255, 255, 0.45);
+    transform: scale(1.1);
+  }
+  
+  .controlButton:active {
+    transform: scale(0.95);
+  }
+  
+  .controlButton:focus-visible {
+    outline: 0.125rem solid #fff;
+    outline-offset: 0.125rem;
+  }

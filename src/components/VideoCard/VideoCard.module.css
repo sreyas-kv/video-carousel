@@ -1,0 +1,77 @@
+.card {
+    flex: 0 0 calc(24% - 2.125rem);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: flex-basis 0.3s ease;
+  }
+    
+  .videoWrapper {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 31.25rem;
+    width: 18.75rem;
+    /* Checkerboard placeholder shown before video loads */
+    background-color: #d8d8d3;
+    background-image:
+      linear-gradient(45deg, #c8c8c3 25%, transparent 25%),
+      linear-gradient(-45deg, #c8c8c3 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #c8c8c3 75%),
+      linear-gradient(-45deg, transparent 75%, #c8c8c3 75%);
+    background-size: 1.875rem 1.875rem;
+    background-position: 0 0, 0 0.9375rem, 0.9375rem -0.9375rem, -0.9375rem 0;
+  }
+  
+  /* Active highlight ring matching Figma design */
+  .card.active .videoWrapper {
+    outline: 0.25rem solid #69A2FF;
+    outline-offset: 0.125rem;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .title {
+    font-size: 0.8125rem;
+    color: #374151;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0.125rem;
+  }
+  
+  /* ── Responsive breakpoints ── */
+  
+  @media (max-width: 64rem) {
+    .card {
+      flex: 0 0 calc(33.333% - 0.875rem);
+    }
+    .card.active {
+      flex: 0 0 calc(36% - 0.875rem);
+    }
+  }
+  
+  @media (max-width: 48rem) {
+    .card {
+      flex: 0 0 calc(50% - 0.625rem);
+    }
+    .card.active {
+      flex: 0 0 calc(54% - 0.625rem);
+    }
+  }
+  
+  @media (max-width: 30rem) {
+    .card {
+      flex: 0 0 calc(23% - 0.625rem);
+    }
+    .card.active {
+      flex: 0 0 calc(23% - 0.625rem);
+    }
+  }
